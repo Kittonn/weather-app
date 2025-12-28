@@ -14,9 +14,9 @@ protocol WeatherServiceProtocol {
 }
 
 final class WeatherService: WeatherServiceProtocol {
-    private let httpClient: HTTPClient
+    private let httpClient: HTTPClientProtocol
     
-    init(httpClient: HTTPClient = HTTPClient()) {
+    init(httpClient: HTTPClientProtocol = HTTPClient()) {
         self.httpClient = httpClient
     }
     

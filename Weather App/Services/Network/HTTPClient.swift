@@ -9,7 +9,8 @@ import Foundation
 
 enum HTTPError: Error {
     case invalidURL
-    case invalidResponse(statusCode: Int)
+    case invalidResponse
+    case serverError(statusCode: Int)
     case decodingError(Error)
 }
 
@@ -43,11 +44,11 @@ final class HTTPClient: HTTPClientProtocol {
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw HTTPError.invalidResponse(statusCode: -1)
+            throw HTTPError.invalidResponse
         }
         
         guard (200...299).contains(httpResponse.statusCode) else {
-            throw HTTPError.invalidResponse(statusCode: httpResponse.statusCode)
+            throw HTTPError.serverError(statusCode: httpResponse.statusCode)
         }
         
         do {
