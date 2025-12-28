@@ -49,5 +49,5 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
-
+Weather App/SecureAPIKeys/Secrets.xcconfig
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos
