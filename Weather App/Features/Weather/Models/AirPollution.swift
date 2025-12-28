@@ -9,11 +9,11 @@ import Foundation
 
 // Reference: https://openweathermap.org/api/air-pollution
 
-struct PollutionMain: Codable {
+struct AirPollutionMain: Codable {
     let aqi: Int
 }
 
-struct PollutionComponents: Codable {
+struct AirPollutionComponents: Codable {
     let co: Double
     let no: Double
     let no2: Double
@@ -24,13 +24,13 @@ struct PollutionComponents: Codable {
     let nh3: Double
 }
 
-struct PollutionItem: Codable {
-    let main: PollutionMain
-    let components: PollutionComponents
+struct AirPollutionItem: Codable {
+    let main: AirPollutionMain
+    let components: AirPollutionComponents
     let dt: Int
 }
 
-struct Pollution {
+struct AirPollution: Codable {
     let coord: Coordinates
-    let list: [PollutionItem]
+    let list: [AirPollutionItem]
 }
