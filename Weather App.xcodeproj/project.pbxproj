@@ -14,7 +14,6 @@
 		F6C2B9D12F01BB70000F921E /* Exceptions for "Weather App" folder in "Weather App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
 				SecureAPIKeys/Secrets.xcconfig,
 			);
 			target = F687778E2EFEDA5B00DF964E /* Weather App */;
